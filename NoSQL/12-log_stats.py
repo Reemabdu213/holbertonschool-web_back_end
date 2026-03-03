@@ -15,7 +15,7 @@ def log_stats() -> None:
     methods = ["GET", "POST", "PUT", "PATCH", "DELETE"]
     for method in methods:
         count = collection.count_documents({"method": method})
-        print(f"    method {method}: {count}")
+        print(f"\tmethod {method}: {count}")
 
     status_count = collection.count_documents(
         {"method": "GET", "path": "/status"}
