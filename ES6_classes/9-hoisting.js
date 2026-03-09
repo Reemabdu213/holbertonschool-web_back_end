@@ -42,8 +42,6 @@ export const student3 = new StudentHolberton('Albert', 'Clinton', class2019);
 export const student4 = new StudentHolberton('Donald', 'Bush', class2019);
 export const student5 = new StudentHolberton('Jason', 'Sandler', class2019);
 
-export const listOfStudents = [student1, student2, student3, student4, student5];', class2019);
-export const student4 = new StudentHolberton('Donald', 'Bush', class2019);
-export const student5 = new StudentHolberton('Jason', 'Sandler', class2019);
-
 export const listOfStudents = [student1, student2, student3, student4, student5];
+
+export default listOfStudents;
