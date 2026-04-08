@@ -4,7 +4,7 @@
   "description": "",
   "main": "full_server/server.js",
   "scripts": {
-    "dev": "nodemon --exec babel-node --presets @babel/preset-env full_server/server.js",
+    "dev": "nodemon --exec babel-node --presets babel-preset-env ./full_server/server.js ./database.csv"
     "test": "mocha --require @babel/register --exit full_server/test/*.js"
   },
   "dependencies": {
