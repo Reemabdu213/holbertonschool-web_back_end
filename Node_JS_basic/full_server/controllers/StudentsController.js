@@ -1,4 +1,4 @@
-const readDatabase = require('../utils');
+import readDatabase from '../utils';
 
 class StudentsController {
   static getAllStudents(request, response) {
@@ -6,7 +6,9 @@ class StudentsController {
     readDatabase(databaseFile)
       .then((fields) => {
         let output = 'This is the list of our students';
-        const sortedFields = Object.keys(fields).sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
+        const sortedFields = Object.keys(fields).sort((a, b) =>
+          a.toLowerCase().localeCompare(b.toLowerCase())
+        );
         sortedFields.forEach((field) => {
           output += `\nNumber of students in ${field}: ${fields[field].length}. List: ${fields[field].join(', ')}`;
         });
@@ -30,4 +32,4 @@ class StudentsController {
   }
 }
 
-module.exports = StudentsController;
+export default StudentsController;
